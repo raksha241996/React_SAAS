@@ -1,0 +1,24 @@
+//declaring mixin to reuse any common property
+@mixin flexCentre($direction){
+    align-items: center;
+    display:flex;
+   justify-content:center;
+   flex-direction: $direction // direction value passed
+   
+}
+
+//including mixin
+.App {
+    @include flexCentre(column);
+    background :$backgroundColor ;
+ }
+
+
+ //class that can be extended to use its property
+ .parentClass {
+    align-items: center;
+    display:flex;
+    justify-content:center;
+    color:pink 
+
+ }

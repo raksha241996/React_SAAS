@@ -1,0 +1,27 @@
+//importing different files
+@import  "variables.scss";
+@import "common.scss";
+
+
+
+.buttonStyle{
+   align-self: center;
+   &:hover {
+      background: lightcoral //using hover property
+   }
+}
+
+.heading{
+   color: $textColor // using variables defined in another class
+}
+
+.subHeading {
+   color:lawngreen;
+   @include flexCentre(row); // calling a mixin
+}
+
+// extending another classes property and overriding color value.
+.extends {
+   @extend .parentClass;
+   color:blue;
+}
